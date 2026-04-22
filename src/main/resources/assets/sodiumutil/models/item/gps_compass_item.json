@@ -1,0 +1,16 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "sodiumutil:item/directed_compass_0"
+  },
+  "overrides": [
+    { "predicate": { "angle": 0.000 }, "model": "sodiumutil:item/directed_compass_1" },
+    { "predicate": { "angle": 0.125 }, "model": "sodiumutil:item/directed_compass_2" },
+    { "predicate": { "angle": 0.250 }, "model": "sodiumutil:item/directed_compass_3" },
+    { "predicate": { "angle": 0.375 }, "model": "sodiumutil:item/directed_compass_4" },
+    { "predicate": { "angle": 0.500 }, "model": "sodiumutil:item/directed_compass_5" },
+    { "predicate": { "angle": 0.625 }, "model": "sodiumutil:item/directed_compass_6" },
+    { "predicate": { "angle": 0.750 }, "model": "sodiumutil:item/directed_compass_7" },
+    { "predicate": { "angle": 0.875 }, "model": "sodiumutil:item/directed_compass_0" }
+  ]
+}

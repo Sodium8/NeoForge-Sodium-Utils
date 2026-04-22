@@ -1,0 +1,14 @@
+{
+  "itemGroup.sodiumutil": "Sodium's utils",
+  "block.sodiumutil.gps_station_block": "GPS Station Block",
+  "block.sodiumutil.antenna_block": "Antenna Block",
+  "item.sodiumutil.gps_compass_item": "GPS Compass",
+
+  "sodiumutil.configuration.title": "Example Mod Configs",
+  "sodiumutil.configuration.section.sodiumutil.common.toml": "Example Mod Configs",
+  "sodiumutil.configuration.section.sodiumutil.common.toml.title": "Example Mod Configs",
+  "sodiumutil.configuration.items": "Item List",
+  "sodiumutil.configuration.logDirtBlock": "Log Dirt Block",
+  "sodiumutil.configuration.magicNumberIntroduction": "Magic Number Text",
+  "sodiumutil.configuration.magicNumber": "Magic Number"
+}

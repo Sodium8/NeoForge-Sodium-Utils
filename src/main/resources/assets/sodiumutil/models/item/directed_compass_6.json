@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sodiumutil:item/directed_compass_6"
+  }
+}
