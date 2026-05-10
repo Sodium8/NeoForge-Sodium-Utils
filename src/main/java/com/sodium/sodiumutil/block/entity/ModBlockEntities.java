@@ -11,10 +11,10 @@ public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, SodiumUtilMod.MODID);
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<RedstoneComputerEntity>> REDSTONE_COMPUTER_BLOCK_ENTITY =
+    /*public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<RedstoneComputerEntity>> REDSTONE_COMPUTER_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("my_block_entity",
                     () -> BlockEntityType.Builder.of(
                             RedstoneComputerEntity::new,
                             ModBlocks.REDSTONE_COMPUTER_BLOCK.get()
-                    ).build(null));
+                    ).build(null));*/
 }

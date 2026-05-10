@@ -9,7 +9,7 @@ import net.neoforged.neoforge.common.extensions.IMenuTypeExtension;
 import net.neoforged.neoforge.network.IContainerFactory;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
+/*
 public class ModMenus {
     public static final DeferredRegister<MenuType<?>> MENUS =
             DeferredRegister.create(Registries.MENU, SodiumUtilMod.MODID);
@@ -26,3 +26,4 @@ public class ModMenus {
         MENUS.register(eventBus);
     }
 }
+*/

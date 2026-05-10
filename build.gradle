@@ -122,7 +122,14 @@ configurations {
 }
 
 dependencies {
+    implementation files("libs/aeronautics.jar")
+    implementation files("libs/aeronautics1.jar")
+    implementation files("libs/aeronautics2.jar")
+    implementation files("libs/aeronautics3.jar")
+    implementation files("libs/sable.jar")
     implementation files("libs/create.jar")
+    implementation files("libs/flywheel.jar")
+    implementation files("libs/ponder.jar")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

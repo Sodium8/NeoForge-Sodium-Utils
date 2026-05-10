@@ -1,4 +1,5 @@
 package com.sodium.sodiumutil.screen;
+/*
 
 import com.sodium.sodiumutil.network.packets.SaveCodePacket;
 import com.sodium.sodiumutil.screen.customWidgets.MultiLineTextBox;
@@ -11,7 +12,6 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.neoforged.neoforge.network.PacketDistributor;
-
 public class RedstoneComputerScreen extends AbstractContainerScreen<RedstoneComputerMenu> {
     int _width = 300;
     int _height = 200;
@@ -26,13 +26,10 @@ public class RedstoneComputerScreen extends AbstractContainerScreen<RedstoneComp
         int centerX = this.width/2;
         int centerY = this.height/2;
         field1 = new MultiLineTextBox(this.font, centerX - _width/2 + 20, centerY - _height / 2 + 20, _width-40, _height-50, Component.literal("Code"));
-        field1.setValue(this.menu.blockEntity.getCode());
         this.addRenderableWidget(field1);
         this.addRenderableWidget(
                 Button.builder(Component.literal("Save"), button -> {
-                            String text1 = field1.getValue();
-                            this.menu.blockEntity.setCode(text1);
-                            PacketDistributor.sendToServer(new SaveCodePacket(this.menu.blockEntity.getBlockPos(), text1));
+
                             onClose();
                         })
                         .bounds(centerX + _width/2 - 30, centerY+_height/2-30, 20, 20)
@@ -68,4 +65,4 @@ public class RedstoneComputerScreen extends AbstractContainerScreen<RedstoneComp
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
         return field1.keyPressed(keyCode, scanCode, modifiers);
     }
-}
+}*/

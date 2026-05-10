@@ -1,8 +1,10 @@
 package com.sodium.sodiumutil;
 
 import com.sodium.sodiumutil.block.entity.ModBlockEntities;
+import com.sodium.sodiumutil.data.WindAttachment;
+import com.sodium.sodiumutil.event.ModEvents;
 import com.sodium.sodiumutil.network.ModNetworking;
-import com.sodium.sodiumutil.screen.menu.ModMenus;
+//import com.sodium.sodiumutil.screen.menu.ModMenus;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -41,11 +43,8 @@ public class SodiumUtilMod {
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("sodiumtab", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.sodiumutil"))
-            .icon(() -> GPS_COMPASS_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-                output.accept(GPS_COMPASS_ITEM.get());
-                output.accept(GPS_STATION_BLOCK_ITEM.get());
-                output.accept(ANTENNA_BLOCK_ITEM.get());
+
             }).build());
 
 
@@ -53,13 +52,16 @@ public class SodiumUtilMod {
         modEventBus.addListener(this::commonSetup);
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
+        WindAttachment.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
-        ModMenus.register(modEventBus);
+        //ModMenus.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
+        NeoForge.EVENT_BUS.addListener(ModEvents::onChunkLoad);
+        NeoForge.EVENT_BUS.addListener(ModEvents::onPlayerTick);
         modEventBus.addListener(ModNetworking::register);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

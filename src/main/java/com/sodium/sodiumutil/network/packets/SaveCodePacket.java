@@ -1,7 +1,6 @@
 package com.sodium.sodiumutil.network.packets;
 
 import com.sodium.sodiumutil.SodiumUtilMod;
-import com.sodium.sodiumutil.block.entity.RedstoneComputerEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
@@ -31,11 +30,7 @@ public record SaveCodePacket(BlockPos pos, String code) implements CustomPacketP
         ctx.enqueueWork(() -> {
             Player player = ctx.player();
 
-            BlockEntity be = player.level().getBlockEntity(packet.pos);
-            if (be instanceof RedstoneComputerEntity) {
-                System.out.println("SAVED "+packet.code);
-                ((RedstoneComputerEntity) be).setCode(packet.code);
-            }
+
         });
     }
 }
